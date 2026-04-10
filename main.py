@@ -16,6 +16,8 @@ updated_prod_lst = []
 sales_lst = []
 total = 0
 
+user_name =input("enter your name: ")
+user_phone=input("enter your phone number")
 product_id = input("Enter product ID: ")
 product_quantity = int(input("Enter product quantity: "))
 print(20 * "--")
@@ -47,7 +49,7 @@ for product in products:
                 product_details[3] = '0'
 
         updated_prod_lst.append(product_details)
-        sales_lst.append([product_details[0], product_details[1], str(product_quantity), str(total)])
+        sales_lst.append([product_details[0], product_details[1], str(product_quantity), str(total), user_name, user_phone])
     else:
         updated_prod_lst.append(product.split(','))
 
@@ -64,7 +66,7 @@ fd.close()
 ##update sales database
 fd = open("sales database.txt", "a")
 for i in sales_lst:
-    l = (i[0] + "," + i[1] + "," + i[2] + "," + i[3] + '\n')
+    l = (i[0] + "," + i[1] + "," + i[2] + "," + i[3] + i[4] + "," + i[5] +'\n')
     fd.write(l)
 fd.close()
 

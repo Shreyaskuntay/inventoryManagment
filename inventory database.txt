@@ -1,4 +1,4 @@
-1,milkybar,10,77
+1,milkybar,10,98
 2,fivestar,30,20
 3,honeybar,50,20
 4,proteinbar,100,10
